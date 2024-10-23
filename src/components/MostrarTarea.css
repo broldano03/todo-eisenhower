@@ -1,0 +1,66 @@
+.seccion-tarea {
+    text-align: left;
+}
+
+.seccion-tarea h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+#lista {
+    list-style: none;
+}
+
+#lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Crece verticalmente con el contenido */
+    padding: 10px;
+    background-color: rgba(20, 20, 35, 0.8);
+    border: 1px solid #3a3a50;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    flex-wrap: wrap; /* Salto de línea */
+    gap: 10px;
+}
+
+#lista li:hover {
+    background-color: rgba(30, 30, 50, 0.9);
+}
+
+.co {
+    color: #00b7c5;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.co:hover {
+    color: rgb(63, 255, 255);
+    transform: scale(1.1);
+}
+
+.de {
+    color: #ff5757;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+.de:hover {
+    color: #d51111;
+    transform: scale(1.1);
+}
+
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-color: white;
+}
+
+.por-editar {
+    color: #79f4ff;
+}

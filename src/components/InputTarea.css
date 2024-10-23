@@ -1,0 +1,34 @@
+.agregar-tarea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #4a4a6a;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 20, 0.7);
+}
+
+.input-tarea {
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.input-tarea::placeholder {
+    color: #888;   
+}
+
+.enter {
+    color: #00f0ff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.enter:hover {
+    color: rgb(0, 172, 172);
+    transform: scale(1.1);
+}

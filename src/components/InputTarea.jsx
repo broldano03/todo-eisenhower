@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import './InputTarea.css'
 
 function InputTarea({setTasks}) {
     const [inputValue, setInputValue] = useState('')

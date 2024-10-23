@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faCheckCircle, faPencil, faList } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-regular-svg-icons'
+import './MostrarTarea.css'
 
 
 function MostrarTarea ({tasks, setTasks}) {
