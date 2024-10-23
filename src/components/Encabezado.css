@@ -1,18 +1,18 @@
 .encabezado {
     margin-bottom: 15px;
-  }
-  
-  .encabezado h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 1px #00f0ff, 0 0 20px #00f0ff;
-  }
-  
-  .encabezado span {
-    display: block;
-    margin-top: 15px;
-    font-size: 16px;
-    color: #afafaf;
-  
-  }
+}
+
+.encabezado h1 {
+font-size: 28px;
+font-weight: bold;
+color: #fff;
+text-shadow: 0 0 1px #00f0ff, 0 0 20px #00f0ff;
+}
+
+.encabezado span {
+display: block;
+margin-top: 15px;
+font-size: 16px;
+color: #afafaf;
+
+}
