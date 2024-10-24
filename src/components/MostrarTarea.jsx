@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faCheckCircle, faPencil, faList, faBorderAll } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-regular-svg-icons'
 import './MostrarTarea.css'
+import OpcionesEisen from './eisenhower/OpcionesEisen'
 
 function MostrarTarea ({tasks, setTasks}) {
     const tareaRealizada = (taskId) => {
@@ -44,6 +45,7 @@ function MostrarTarea ({tasks, setTasks}) {
                                         if (e.key === 'Enter') { activarInput(task.id)}}})}
     function editExitClick (task) {return (() => { if (task.editable) 
                                         { activarInput(task.id)}})}
+    
     return (
         <div className="seccion-tarea">
             <h3>Pendientes</h3>
@@ -72,6 +74,7 @@ function MostrarTarea ({tasks, setTasks}) {
                 ))}
             </ul>
         </div>
+        
     )
 }
 

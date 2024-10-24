@@ -18,35 +18,45 @@ html, body {
 
 .container-principal {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap; 
   justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.container-principal > * {
+  max-width: 100%;
 }
 
 .allTasks {
-  width: 40%;
+  width: 50%;
+  padding-bottom: 0;
 }
 
 .eisenhower {
-  width: 60%;
+  width: 1000px;
+  max-width: 95%;
   display: flex;
   justify-content: top;
   align-items: top;
-  height: 100vh;
   margin-top: 10px;
   border-radius: 15px;
 }
 
 .container {
   width: 85%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto;
+  padding: 17px;
   background-color: rgba(2, 2, 45, 0.9);
   box-shadow: 0 4px 15px rgba(11, 2, 66, 0.8);
   border-radius: 15px;
   text-align: left;
-  margin-top: 50px;
+  margin-top: 20px;
   backdrop-filter: blur(10px);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .fecha {
@@ -61,7 +71,7 @@ html, body {
   height: auto;
   table-layout: fixed;
   text-align: left;
-  margin: 20px;
+  margin: auto;
 }
 
 .tabla-eisenhower th,

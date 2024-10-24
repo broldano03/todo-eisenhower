@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusCircle, faBorderAll } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import './InputTarea.css'
+import OpcionesEisen from './eisenhower/OpcionesEisen'
 
 function InputTarea({setTasks}) {
     const [inputValue, setInputValue] = useState('')
@@ -46,7 +47,7 @@ function InputTarea({setTasks}) {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown}
                 />
-                <FontAwesomeIcon icon={faBorderAll}  className='falist'/>
+                <OpcionesEisen/>
                 <FontAwesomeIcon icon={faPlusCircle} className="enter" onClick={handleAddTask} />
             </div>
 
