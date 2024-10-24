@@ -1,4 +1,4 @@
-import MostrarTarea from "../MostrarTarea"
+import MostrarTarea from "../mostrarTareas/MostrarTarea"
 
 
 function MatrizEisen ({tasks, setTasks}) {
@@ -15,13 +15,13 @@ function MatrizEisen ({tasks, setTasks}) {
             <tbody>
             <tr>
                 <th>Importante</th>
-                <td className="haz">HAZ <MostrarTarea tasks={tasks} setTasks={setTasks}/> </td>
-                <td className="planifica">PLANIFICA <MostrarTarea tasks={tasks} setTasks={setTasks}/></td>
+                <td className="haz">HAZ <MostrarTarea tasks={tasks} setTasks={setTasks} filtraPor="Hacer" /> </td>
+                <td className="planifica">PLANIFICA <MostrarTarea tasks={tasks} setTasks={setTasks} filtraPor="Planificar" /></td>
             </tr>
             <tr>
                 <th>No Importante</th>
-                <td className="delegar">DELEGA <MostrarTarea tasks={tasks} setTasks={setTasks}/></td>
-                <td className="eliminar">ELIMINA <MostrarTarea tasks={tasks} setTasks={setTasks}/></td>
+                <td className="delegar">DELEGA <MostrarTarea tasks={tasks} setTasks={setTasks} filtraPor="Delegar"/></td>
+                <td className="eliminar">ELIMINA <MostrarTarea tasks={tasks} setTasks={setTasks} filtraPor="Eliminar"/></td>
             </tr>
             </tbody>
         </table>

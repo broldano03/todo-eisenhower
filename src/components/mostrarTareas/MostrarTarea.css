@@ -40,8 +40,7 @@
     background-color: rgba(30, 30, 50, 0.9);
 }
 
-.de {
-    cursor: pointer;
+.de {  
     font-size: 18px;
     transition: color 0.3s ease;
     margin-left: auto;
@@ -49,7 +48,6 @@
 
 .de:hover {
     color: #f34b13;
-    transform: scale(1.1);
 }
 
 .pencil {
@@ -58,20 +56,11 @@
     margin-left: auto;
 }
 
-.pencil:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-}
 
 .falist {
     font-size: 16px;
     transition: color 0.3s ease;
     margin-left: auto;
-}
-
-.falist:hover {
-    cursor: pointer;
-    transform: scale(1.15);
 }
 
 .line-through {
@@ -81,4 +70,9 @@
 
 .por-editar {
     color: #79f4ff;
+}
+
+.ico:hover {
+    cursor: pointer;
+    transform: scale(1.15);
 }
