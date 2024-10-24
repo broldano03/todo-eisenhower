@@ -9,7 +9,6 @@ function InputTarea({setTasks}) {
     const [taskId, setTaskId] = useState(0)
     const [clasificacion, setClasificacion] = useState('sinClasificar')
 
-    // Función para agregar una tarea
     const addTask = (task) => {
         const newTask = {
             nombre: task,
