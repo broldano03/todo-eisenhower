@@ -1,11 +1,12 @@
 .agregar-tarea {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     border: 1px solid #4a4a6a;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     background-color: rgba(0, 0, 20, 0.7);
+    gap: 10px;
 }
 
 .input-tarea {
@@ -15,6 +16,7 @@
     font-size: 16px;
     color: #fff;
     background-color: transparent;
+
 }
 
 .input-tarea::placeholder {

@@ -3,26 +3,36 @@
 }
 
 .seccion-tarea h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
     color: #ddd;
+    font-style: italic;
+    font-weight: 600;
 }
 
 #lista {
     list-style: none;
 }
 
+.text {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #eee;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
 #lista li {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Crece verticalmente con el contenido */
+    align-items: flex-start;
     padding: 10px;
     background-color: rgba(20, 20, 35, 0.8);
     border: 1px solid #3a3a50;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
-    flex-wrap: wrap; /* Salto de línea */
     gap: 10px;
 }
 
@@ -30,20 +40,7 @@
     background-color: rgba(30, 30, 50, 0.9);
 }
 
-.co {
-    color: #00b7c5;
-    cursor: pointer;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.co:hover {
-    color: rgb(63, 255, 255);
-    transform: scale(1.1);
-}
-
 .de {
-    color: #ff5757;
     cursor: pointer;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -51,10 +48,31 @@
 }
 
 .de:hover {
-    color: #d51111;
+    color: #f34b13;
     transform: scale(1.1);
 }
 
+.pencil {
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+.pencil:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.falist {
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+.falist:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
 
 .line-through {
     text-decoration: line-through;
