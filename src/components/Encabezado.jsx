@@ -1,11 +1,11 @@
 import './Encabezado.css'
 
-function Encabezado () {
+function Encabezado ({titulo, subtitulo}) {
 
     return (
         <div className='encabezado'>
-            <h1>ToDo List - Eisenhower</h1>
-            <span>Vamos a cumplir tus metas</span>
+            <h1>{titulo}</h1>
+            <span>{subtitulo}</span>
         </div>
     )
 }

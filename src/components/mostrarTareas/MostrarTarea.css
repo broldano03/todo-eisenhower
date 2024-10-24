@@ -1,0 +1,78 @@
+.seccion-tarea {
+    text-align: left;
+}
+
+.seccion-tarea h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ddd;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#lista {
+    list-style: none;
+}
+
+.text {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #eee;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+#lista li {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: rgba(20, 20, 35, 0.8);
+    border: 1px solid #3a3a50;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    gap: 10px;
+}
+
+#lista li:hover {
+    background-color: rgba(30, 30, 50, 0.9);
+}
+
+.de {  
+    font-size: 18px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+.de:hover {
+    color: #f34b13;
+}
+
+.pencil {
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+
+.falist {
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-color: white;
+}
+
+.por-editar {
+    color: #79f4ff;
+}
+
+.ico:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}

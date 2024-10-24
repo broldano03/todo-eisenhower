@@ -1,0 +1,35 @@
+.optionEisen {
+    display: flex;
+    align-items: center;
+    background-color: #062cc3;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    text-align: center;
+}
+
+.optionEisen:hover {
+    background-color: #050543;
+    width: auto;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+}
+
+select:focus {
+    border-color: #666;
+    width: auto;
+}
+
+option {
+    padding: 0px;
+    font-size: 16px;
+    width: auto;
+}

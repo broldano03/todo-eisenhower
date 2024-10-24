@@ -8,7 +8,7 @@
 html, body {
   height: 100%;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #1e1e2e 20%, #232344 50%, #191932 80%);
+  background: linear-gradient(135deg, #0a0a47 20%, #13137c 50%, #010180 80%);
   color: #fff;
   overflow: auto;
 }
@@ -16,22 +16,48 @@ html, body {
 /* Importar */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-/* Contenedor principal */
-.container {
-  max-width: 80%;
-  width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(30, 30, 46, 0.9);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-  border-radius: 15px;
-  text-align: center;
-  margin-top: 50px;
-  backdrop-filter: blur(10px);
-  margin-bottom: 50px;
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: center;
 }
 
+.container-principal > * {
+  max-width: 100%;
+}
 
+.allTasks {
+  width: 50%;
+  padding-bottom: 0;
+}
+
+.eisenhower {
+  width: 1000px;
+  max-width: 95%;
+  display: flex;
+  justify-content: top;
+  align-items: top;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  padding: 17px;
+  background-color: rgba(2, 2, 45, 0.9);
+  box-shadow: 0 4px 15px rgba(11, 2, 66, 0.8);
+  border-radius: 15px;
+  text-align: left;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 10px;
+}
 
 .fecha {
   font-size: 14px;
@@ -39,114 +65,39 @@ html, body {
   margin-bottom: 10px;
 }
 
-.agregar-tarea {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  border: 1px solid #4a4a6a;
-  border-radius: 8px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 20, 0.7);
+.tabla-eisenhower {
+  border-collapse: collapse;
+  width: auto;
+  height: auto;
+  table-layout: fixed;
+  text-align: left;
+  margin: auto;
 }
 
-.input-tarea {
-  width: 85%;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #fff;
-  background-color: transparent;
-}
-
-.input-tarea::placeholder {
-  color: #888;
-}
-
-.enter {
-  color: #00f0ff;
-  font-size: 24px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.enter:hover {
-  color: rgb(0, 172, 172);
-  transform: scale(1.1);
-}
-
-.seccion-tarea {
+.tabla-eisenhower th,
+.tabla-eisenhower td {
+  padding: 20px;
+  font-size: 1em;
   text-align: left;
 }
 
-.seccion-tarea h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #ddd;
+.tabla-eisenhower th {
+  background-color: #020029;
+  font-weight: bold;
 }
 
-#lista {
-  list-style: none;
+.haz {
+  background-color: #de4d04;
 }
 
-#lista li {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Crece verticalmente con el contenido */
-  padding: 10px;
-  background-color: rgba(20, 20, 35, 0.8);
-  border: 1px solid #3a3a50;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
-  flex-wrap: wrap; /* Salto de línea */
-  gap: 10px;
+.planifica {
+  background-color: #008980;
 }
 
-#lista li:hover {
-  background-color: rgba(30, 30, 50, 0.9);
+.delegar {
+  background-color: #0101a2;
 }
 
-.co {
-  color: #00b7c5;
-  cursor: pointer;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.co:hover {
-  color: rgb(63, 255, 255);
-  transform: scale(1.1);
-}
-
-.text {
-  flex-grow: 1;
-  margin-left: 10px;
-  color: #eee;
-  font-size: 16px;
-  word-wrap: break-word;
-  word-break: break-word;
-  max-width: 100%;
-}
-
-.de {
-  color: #ff5757;
-  cursor: pointer;
-  font-size: 18px;
-  transition: color 0.3s ease;
-  margin-left: auto;
-}
-
-.de:hover {
-  color: #d51111;
-  transform: scale(1.1);
-}
-
-
-.line-through {
-  text-decoration: line-through;
-  text-decoration-color: white;
-}
-
-.por-editar {
-  color: #79f4ff;
+.eliminar {
+  background-color: #e33303;
 }
