@@ -18,8 +18,10 @@ function App() {
             <InputTarea setTasks={setTasks}/>
           </div>
         </div>
-          {selectedComponent === "EisenHower" && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
-          {selectedComponent === "ToDo-Basic" && <TodoBasic tasks={tasks} setTasks={setTasks} />}
+          {selectedComponent === "EisenHower" 
+            && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
+          {selectedComponent === "ToDo-Basic" 
+            && <TodoBasic tasks={tasks} setTasks={setTasks} />}
       </div>
     </>
   )
