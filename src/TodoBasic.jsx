@@ -1,6 +1,12 @@
-const TodoBasic = () => {
+import MostrarTarea from "./components/mostrarTareas/MostrarTarea"
+
+const TodoBasic = ({tasks, setTasks}) => {
     return (
-        <h1>Hola</h1>
+        
+        <>
+        <MostrarTarea tasks={tasks} setTasks={setTasks} 
+        filtraPor="All"/>
+        </>
     )
 }
 

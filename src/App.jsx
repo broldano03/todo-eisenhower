@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import { useMenuContext } from './context/MenuContext'
 import InputTarea from './components/InputTarea'
 import MatrizEisen from './components/eisenhower/MatrizEisen'
+import TodoBasic from './TodoBasic'
+
 
 function App() {
+  const { selectedComponent } = useMenuContext()
   const [tasks, setTasks] = useState([])
 
   return (
@@ -14,9 +18,8 @@ function App() {
             <InputTarea setTasks={setTasks}/>
           </div>
         </div>
-        <div className='eisenhower'>
-          <MatrizEisen tasks={tasks} setTasks={setTasks}/>
-        </div>
+          {selectedComponent === "EisenHower" && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
+          {selectedComponent === "ToDo-Basic" && <TodoBasic tasks={tasks} setTasks={setTasks} />}
       </div>
     </>
   )
