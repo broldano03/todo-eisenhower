@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Encabezado from './components/Encabezado'
 import InputTarea from './components/InputTarea'
 import MatrizEisen from './components/eisenhower/MatrizEisen'
 
@@ -9,7 +8,6 @@ function App() {
 
   return (
     <>
-      <Encabezado titulo="TO-DO LIST" subtitulo="¡Vamos por tus metas!"/>
       <div className='container-principal'>
         <div className="allTasks">
           <div className='container'>
