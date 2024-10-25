@@ -1,18 +1,31 @@
 .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 40px;
     background: linear-gradient(135deg, #090920 20%, #06065a 50%, #00002f 80%);
+    box-sizing: border-box;
 }
 
-.encabezado h1 {
-font-size: 28px;
-font-weight: 800;
-color: #fff;
+.titulos {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.encabezado span {
+.titulos h1{
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.titulos span {
 display: block;
 font-weight: 600;
 margin-top: 8px;

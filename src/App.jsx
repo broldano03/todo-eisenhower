@@ -1,24 +1,27 @@
 import { useState } from 'react'
 import './App.css'
-import Encabezado from './components/Encabezado'
+import { useMenuContext } from './context/MenuContext'
 import InputTarea from './components/InputTarea'
 import MatrizEisen from './components/eisenhower/MatrizEisen'
+import TodoBasic from './TodoBasic'
+
 
 function App() {
+  const { selectedComponent } = useMenuContext()
   const [tasks, setTasks] = useState([])
 
   return (
     <>
-      <Encabezado titulo="TO-DO LIST" subtitulo="¡Vamos por tus metas!"/>
       <div className='container-principal'>
         <div className="allTasks">
           <div className='container'>
             <InputTarea setTasks={setTasks}/>
           </div>
         </div>
-        <div className='eisenhower'>
-          <MatrizEisen tasks={tasks} setTasks={setTasks}/>
-        </div>
+          {selectedComponent === "EisenHower" 
+            && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
+          {selectedComponent === "ToDo-Basic" 
+            && <TodoBasic tasks={tasks} setTasks={setTasks} />}
       </div>
     </>
   )

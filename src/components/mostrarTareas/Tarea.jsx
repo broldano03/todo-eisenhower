@@ -58,7 +58,7 @@ function Tarea ({task, setTasks}) {
                 onKeyDown={inputEnter(task)}
                 onBlur={editExitClick(task)}
             />
-            <IconosTareas task={task} activarInput={activarInput}
+            <IconosTareas task={task} setTasks={setTasks} activarInput={activarInput}
             tareaEliminada={tareaEliminada} />
         </li>
     )

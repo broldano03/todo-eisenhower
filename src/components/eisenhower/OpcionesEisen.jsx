@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './OpcionesEisen.css'
 
-const OpcionesEisen = ({onClasificationChange}) => {
-    const [seleccion, setSeleccion] = useState('')
+const OpcionesEisen = ({onClasificationChange, clasificacionActual}) => {
+    const [seleccion, setSeleccion] = useState('Hacer')
+
+    useEffect(() => {
+        setSeleccion(clasificacionActual)
+    }, [clasificacionActual])
 
     const handleChange = (e) => {
-        setSeleccion(e.target.value)
-        onClasificationChange(e.target.value)
+        const nuevoValor = e.target.value
+        setSeleccion(nuevoValor)
+        onClasificationChange(nuevoValor)
     }
 
     const opciones = [
@@ -21,8 +26,12 @@ const OpcionesEisen = ({onClasificationChange}) => {
         <div >
             <select value={seleccion} onChange={handleChange} className='optionEisen'>
                 {opciones.map((opcion, index) => (
-                    <option key={`${opcion.valor}-${index}`} value={opcion.valor} className={`${opcion.valor}`}>
-                        {opcion.texto}
+                    <option 
+                        key={`${opcion.valor}-${index}`}
+                        value={opcion.valor}
+                        className={`${opcion.valor}`}
+                    >
+                            {opcion.texto}
                     </option>
                 ))}
             </select>  

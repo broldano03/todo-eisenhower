@@ -7,7 +7,7 @@ import OpcionesEisen from './eisenhower/OpcionesEisen'
 function InputTarea({setTasks}) {
     const [inputValue, setInputValue] = useState('')
     const [taskId, setTaskId] = useState(0)
-    const [clasificacion, setClasificacion] = useState('sinClasificar')
+    const [clasificacion, setClasificacion] = useState('Hacer')
 
     const addTask = (task) => {
         const newTask = {
@@ -22,7 +22,6 @@ function InputTarea({setTasks}) {
         setTasks((prevTasks) => [...prevTasks, newTask])
         setTaskId((prevId) => prevId + 1)
         setInputValue('')
-        setClasificacion('sinClasificar')
     }
 
     const handleAddTask = () => {
