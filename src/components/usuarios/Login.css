@@ -1,0 +1,74 @@
+.bodylogin {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    margin: 0;
+    background: rgba(0, 2, 43, 0.698);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    color: #fbb023; /* Color amarillo para el título */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.field {
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    color: #98a3a5; /* Color gris claro para las etiquetas */
+    margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ffffff60;
+    border-radius: 5px;
+    background: #00014298; /* Fondo de campo oscuro */
+    color: #f1ac88; /* Color claro para el texto del campo */
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #fbb023; /* Color amarillo al enfocar el campo */
+    outline: none;
+}
+
+.submit {
+    margin-top: 1.5rem;
+}
+
+input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #d0581c, #fbb023); /* Degradado para el botón */
+    color: #0a0400; /* Color de texto oscuro */
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #fbb023, #d0581c); /* Cambio de degradado al pasar el mouse */
+}

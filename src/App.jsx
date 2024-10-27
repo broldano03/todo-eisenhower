@@ -4,9 +4,13 @@ import { useMenuContext } from './context/MenuContext'
 import InputTarea from './components/InputTarea'
 import MatrizEisen from './components/eisenhower/MatrizEisen'
 import TodoBasic from './TodoBasic'
+import { Navigate } from 'react-router-dom'
 
 
 function App() {
+
+  if (!localStorage.getItem("tokenTODO")) return <Navigate to="/login" />
+
   const { selectedComponent } = useMenuContext()
   const [tasks, setTasks] = useState([])
 
