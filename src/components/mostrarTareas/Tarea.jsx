@@ -6,35 +6,49 @@ import IconosTareas from './IconosTareas'
 
 function Tarea ({task, setTasks}) {
 
+    const actualizarLocalStorage = (tasks) => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
     const tareaRealizada = (taskId) => {
-        setTasks((prevTasks) =>
-            prevTasks.map((task) =>
+        setTasks((prevTasks) => {
+            const updateTasks = prevTasks.map((task) =>
                 task.id === taskId ? { ...task, realizado: !task.realizado } : task
             )
-        )
+            actualizarLocalStorage(updateTasks)
+            return updateTasks
+        })
     }
 
     const editarTarea = (taskId, nuevoNombre) => {
-        setTasks((prevTasks) => 
-            prevTasks.map((task) =>
+        setTasks((prevTasks) => {
+            const updateTasks = prevTasks.map((task) =>
                 task.id === taskId ? { ...task, nombre: nuevoNombre} : task
             )
-        )
+            actualizarLocalStorage(updateTasks)
+            return updateTasks
+        })
     }
 
     const activarInput = (taskId) => {
-        setTasks((prevTasks) =>
-            prevTasks.map((task) =>
+        setTasks((prevTasks) => {
+            const updateTasks = prevTasks.map((task) =>
                 task.id === taskId ? { ...task, editable: !task.editable } : task
             )
-        )
+            actualizarLocalStorage(updateTasks)
+            return updateTasks
+        })
     }
 
     const tareaEliminada = (taskId) => {
-        setTasks((prevTasks) =>
-            prevTasks.filter(
+        setTasks((prevTasks) =>{
+            const updateTasks = prevTasks.filter(
                 (task) => task.id !== taskId
             )
+            actualizarLocalStorage(updateTasks)
+            return updateTasks
+        }
+            
         )
     }
 

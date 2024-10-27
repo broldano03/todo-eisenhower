@@ -4,9 +4,8 @@ import { useState } from 'react'
 import './InputTarea.css'
 import OpcionesEisen from './eisenhower/OpcionesEisen'
 
-function InputTarea({setTasks}) {
+function InputTarea({tasks, setTasks, taskId, setTaskId}) {
     const [inputValue, setInputValue] = useState('')
-    const [taskId, setTaskId] = useState(0)
     const [clasificacion, setClasificacion] = useState('Hacer')
 
     const addTask = (task) => {
@@ -19,7 +18,11 @@ function InputTarea({setTasks}) {
             clasificacion: clasificacion
         }
 
-        setTasks((prevTasks) => [...prevTasks, newTask])
+        setTasks((prevTasks) => {
+            const updateTasks = [...prevTasks, newTask]
+            localStorage.setItem ('tasks', JSON.stringify(updateTasks) )
+            return updateTasks
+        })
         setTaskId((prevId) => prevId + 1)
         setInputValue('')
     }

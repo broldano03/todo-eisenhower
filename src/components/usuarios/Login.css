@@ -18,7 +18,7 @@
 }
 
 h1 {
-    color: #fbb023; /* Color amarillo para el título */
+    color: white; 
     margin-bottom: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -70,5 +70,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: linear-gradient(135deg, #fbb023, #d0581c); /* Cambio de degradado al pasar el mouse */
+    background: linear-gradient(135deg, #fbe523, #d0581c); /* Cambio de degradado al pasar el mouse */
 }

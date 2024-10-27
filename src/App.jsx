@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { useMenuContext } from './context/MenuContext'
 import InputTarea from './components/InputTarea'
@@ -13,15 +13,30 @@ function App() {
 
   const { selectedComponent } = useMenuContext()
   const [tasks, setTasks] = useState([])
+  const [taskId, setTaskId] = useState(0)
+
+  useEffect(() => {
+    // Cargar tareas de localStorage solo cuando el componente se monta
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || []
+    setTasks(storedTasks)
+    setTaskId(storedTasks.length > 0 ? storedTasks[storedTasks.length - 1].id + 1 : 0)
+  }, []);
+
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks])
 
   return (
     <>
       <div className='container-principal'>
         <div className="allTasks">
           <div className='container'>
-            <InputTarea setTasks={setTasks}/>
+            <InputTarea setTasks={setTasks} taskId={taskId} setTaskId={setTaskId} />
           </div>
         </div>
+          {selectedComponent === "" 
+            && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
           {selectedComponent === "EisenHower" 
             && <MatrizEisen tasks={tasks} setTasks={setTasks} />}
           {selectedComponent === "ToDo-Basic" 
